@@ -83,7 +83,7 @@
 <header class="py-6 border-b border-slate-200 bg-white">
   <div class="container mx-auto px-4 flex justify-center">
     <a href="/" class="flex items-center gap-2 text-blue-600 font-bold text-xl">
-      <img src="/images/logo.png" alt="HEIC2JPGs" class="h-8 w-auto">
+      <img src="/images/logo.png" alt="HEIC2JPGs logo" class="h-8 w-auto" loading="lazy">
       HEIC2JPGs
     </a>
   </div>
@@ -103,7 +103,7 @@
             <polyline points="17 8 12 3 7 8"></polyline>
             <line x1="12" x2="12" y1="3" y2="15"></line>
           </svg>
-          <h3 class="text-xl font-semibold text-slate-700 mb-2">Drop your HEIC files here</h3>
+          <h2 class="text-xl font-semibold text-slate-700 mb-2">Drop your HEIC files here</h2>
           <p class="text-slate-500 mb-6">or click to browse</p>
           <button id="selectBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-200 inline-flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -119,7 +119,7 @@
         <!-- File List -->
         <div id="fileList" class="hidden">
           <div class="flex items-center justify-between mb-4">
-            <h3 class="text-lg font-semibold text-slate-800">Selected Files (<span id="fileCount">0</span>)</h3>
+            <h2 class="text-lg font-semibold text-slate-800">Selected Files (<span id="fileCount">0</span>)</h2>
             <button id="addMoreBtn" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">Add More</button>
           </div>
           <div id="filesContainer" class="space-y-2 mb-6 max-h-64 overflow-y-auto"></div>
@@ -132,7 +132,7 @@
         <!-- Converted List -->
         <div id="convertedList" class="hidden">
           <div class="flex items-center justify-between mb-4">
-            <h3 class="text-lg font-semibold text-slate-800 flex items-center gap-2">Converted Files (<span id="convertedCount">0</span>)</h3>
+            <h2 class="text-lg font-semibold text-slate-800 flex items-center gap-2">Converted Files (<span id="convertedCount">0</span>)</h2>
           </div>
           <div id="convertedContainer" class="space-y-2 mb-6 max-h-64 overflow-y-auto"></div>
           <div class="flex gap-3">
@@ -144,7 +144,7 @@
       </div>
 
       <div class="bg-blue-50 border border-blue-200 rounded-xl p-6">
-        <h4 class="font-semibold text-blue-900 mb-2">About HEIC Format</h4>
+        <h3 class="font-semibold text-blue-900 mb-2">About HEIC Format</h3>
         <p class="text-blue-800 text-sm leading-relaxed">HEIC (High Efficiency Image Container) is a modern image format used by Apple devices. This converter processes your images entirely in your browser - no files are uploaded to any server, ensuring complete privacy and security.</p>
       </div>
     </div>
@@ -392,4 +392,5 @@
   
 </body>
 </html>
+
 
