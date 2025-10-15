@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HEIC to JPG Converter – Free & Fast Online Tool | HEIC2JPGs</title>
+  <meta name="description" content="Convert HEIC to JPG instantly with our free online converter. No software needed – turn iPhone HEIC images into standard JPG format in seconds. Safe, fast, and easy.">
+  <meta name="robots" content="index, follow">
+  
+  <link rel="canonical" href="https://heic2jpgs.com/">
+  <!-- Favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-48x48.png">
+
+<!-- Apple Touch Icon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<!-- Android/Chrome Icons -->
+<link rel="icon" type="image/png" sizes="192x192" href="/images/logo.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/logo.png">
+
+<!-- Web App Manifest -->
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Microsoft Tiles -->
+<meta name="msapplication-TileColor" content="#00b894">
+<meta name="msapplication-TileImage" content="/images/mstile-150x150.png">
+
+<!-- Browser Theme Colors -->
+<meta name="theme-color" content="#00b894">
+<meta name="apple-mobile-web-app-status-bar-style" content="#00b894">
+
+<!-- Optional Fallback -->
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<!-- Open Graph -->
+  <meta property="og:site_name" content="HEIC2JPGs">
+  <meta property="og:title" content="HEIC to JPG Converter – Free & Fast Online Tool | HEIC2JPGs">
+  <meta property="og:description" content="Convert HEIC to JPG instantly. Free online iPhone image converter – no software, no upload. Secure, fast, and privacy-safe.">
+  <meta property="og:image" content="https://heic2jpgs.com/assets/og-image.jpg">
+  <meta property="og:url" content="https://heic2jpgs.com/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free HEIC to JPG Converter – HEIC2JPGs">
+  <meta name="twitter:description" content="Fast, secure, and easy HEIC to JPG conversion directly in your browser. No upload required.">
+  <meta name="twitter:image" content="https://heic2jpgs.com/assets/og-image.jpg">
+
+  <!-- JSON-LD Schema (FAQ + WebApp) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "HEIC2JPGs",
+    "url": "https://heic2jpgs.com",
+    "description": "Convert HEIC to JPG online – free, fast, secure. Works on iPhone, Mac, Windows, and Android.",
+    "applicationCategory": "PhotoEditingApplication",
+    "operatingSystem": "Any"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question","name": "What is a HEIC file?","acceptedAnswer": {"@type": "Answer","text": "HEIC is Apple's High Efficiency Image Container, offering high-quality images with smaller file sizes."}},
+      {"@type": "Question","name": "Why convert HEIC to JPG?","acceptedAnswer": {"@type": "Answer","text": "To ensure compatibility across all platforms and devices."}},
+      {"@type": "Question","name": "Is HEIC2JPGs free?","acceptedAnswer": {"@type": "Answer","text": "Yes, our converter is completely free with no limits."}},
+      {"@type": "Question","name": "Are my photos private?","acceptedAnswer": {"@type": "Answer","text": "Yes, all conversions happen in your browser. No uploads or data storage."}}
+    ]
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/heic2any@0.0.4/dist/heic2any.min.js"></script>
+  <style>
+    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    .animate-spin { animation: spin 1s linear infinite; }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-slate-100 text-slate-800">
+<header class="py-6 border-b border-slate-200 bg-white">
+  <div class="container mx-auto px-4 flex justify-center">
+    <a href="/" class="flex items-center gap-2 text-blue-600 font-bold text-xl">
+      <img src="/images/logo.png" alt="HEIC2JPGs" class="h-8 w-auto">
+      HEIC2JPGs
+    </a>
+  </div>
+</header>
+  <div class="text-center py-10" id="top">
+    <h1 class="text-4xl font-bold mb-2">HEIC to JPG Converter – Free Online Tool</h1>
+    <p class="text-slate-600 text-lg">Convert your iPhone HEIC photos to high-quality JPGs instantly. No sign-up, no software – just drag, drop, and download.</p>
+  </div>
+
+  <!-- Converter Section -->
+  <main class="min-h-screen">
+    <div class="container mx-auto px-4 py-12 max-w-4xl">
+      <div class="bg-white rounded-2xl shadow-xl p-8 mb-6">
+        <div id="dropzone" class="border-3 border-dashed rounded-xl p-12 text-center transition-all duration-200 border-slate-300 hover:border-slate-400 hover:bg-slate-50">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-4 text-slate-400">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" x2="12" y1="3" y2="15"></line>
+          </svg>
+          <h3 class="text-xl font-semibold text-slate-700 mb-2">Drop your HEIC files here</h3>
+          <p class="text-slate-500 mb-6">or click to browse</p>
+          <button id="selectBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-200 inline-flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="17 8 12 3 7 8"></polyline>
+              <line x1="12" x2="12" y1="3" y2="15"></line>
+            </svg>
+            Select Files
+          </button>
+          <input type="file" id="fileInput" multiple accept=".heic,image/heic" class="hidden">
+        </div>
+
+        <!-- File List -->
+        <div id="fileList" class="hidden">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-lg font-semibold text-slate-800">Selected Files (<span id="fileCount">0</span>)</h3>
+            <button id="addMoreBtn" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">Add More</button>
+          </div>
+          <div id="filesContainer" class="space-y-2 mb-6 max-h-64 overflow-y-auto"></div>
+          <div class="flex gap-3">
+            <button id="convertBtn" class="flex-1 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-300 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2">Convert to JPG</button>
+            <button id="clearBtn" class="px-6 py-3 border-2 border-slate-300 hover:border-slate-400 text-slate-700 font-semibold rounded-lg transition-colors duration-200">Clear</button>
+          </div>
+        </div>
+
+        <!-- Converted List -->
+        <div id="convertedList" class="hidden">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-lg font-semibold text-slate-800 flex items-center gap-2">Converted Files (<span id="convertedCount">0</span>)</h3>
+          </div>
+          <div id="convertedContainer" class="space-y-2 mb-6 max-h-64 overflow-y-auto"></div>
+          <div class="flex gap-3">
+            <button id="downloadAllBtn" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2">Download All</button>
+            <button id="convertMoreBtn" class="px-6 py-3 border-2 border-slate-300 hover:border-slate-400 text-slate-700 font-semibold rounded-lg transition-colors duration-200">Convert More</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6">
+        <h4 class="font-semibold text-blue-900 mb-2">About HEIC Format</h4>
+        <p class="text-blue-800 text-sm leading-relaxed">HEIC (High Efficiency Image Container) is a modern image format used by Apple devices. This converter processes your images entirely in your browser - no files are uploaded to any server, ensuring complete privacy and security.</p>
+      </div>
+    </div>
+  </main>
+
+<section class="max-w-4xl mx-auto px-6 py-16 text-slate-800">
+    <h2 class="text-3xl font-bold mb-4 text-center">Free Online HEIC to JPG Converter – Convert iPhone Photos to JPG in Seconds</h2>
+    <p class="mb-4 text-lg text-slate-600 text-center">
+      HEIC2JPGs is a simple, fast, and reliable online converter that helps you turn HEIC (High Efficiency Image Format) photos into standard JPG files. Whether your images come from iPhone, iPad, or macOS, our tool ensures perfect compatibility across all devices, apps, and browsers.
+    </p>
+    <p class="text-lg text-slate-600 text-center">
+      You don’t need to download any software or create an account – everything happens securely in your browser. Just upload your HEIC files and download clear, compressed JPGs in seconds.
+    </p>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-semibold mb-4 text-slate-800 flex items-center gap-2">Key Features</h2>
+    <ul class="list-disc pl-6 space-y-2 text-slate-700">
+      <li><strong>Free & unlimited:</strong> Convert HEIC to JPG online without limits or hidden fees.</li>
+      <li><strong>Fast & simple:</strong> Drag and drop multiple HEIC images for quick conversion.</li>
+      <li><strong>High-quality output:</strong> Get optimized JPGs without losing image clarity.</li>
+      <li><strong>Secure & private:</strong> All conversions happen locally – your files are never stored.</li>
+      <li><strong>Works on all devices:</strong> Supports Windows, Mac, Android, and iOS browsers.</li>
+    </ul>
+  </section>
+
+  
+  <section class="max-w-4xl mx-auto px-6 py-12 bg-slate-50 rounded-2xl shadow-sm">
+    <h2 class="text-2xl font-semibold mb-4 text-slate-800">What is HEIC and Why Convert to JPG?</h2>
+    <p class="text-slate-700 leading-relaxed mb-4">
+      HEIC stands for <strong>High Efficiency Image Container</strong>, a format introduced by Apple to store images more efficiently. Photos taken on iPhones and iPads running iOS 11 or later use the <strong>HEIF codec</strong> inside HEIC files. While this format delivers high quality at smaller sizes, it’s not supported by older systems, Windows, or many online apps.
+    </p>
+    <p class="text-slate-700 leading-relaxed mb-4">
+      That’s why users often need to <strong>convert HEIC to JPG</strong> — a universally compatible format recognized by all devices, browsers, and software like Photoshop, Windows Photos, and Android gallery apps. With HEIC2JPGs, you can <strong>instantly turn iPhone HEIC photos into standard JPGs</strong> without uploading files to any server.
+    </p>
+
+    <h3 class="text-xl font-semibold mt-8 mb-3 text-slate-800">HEIC vs JPG: What's the Difference?</h3>
+    <table class="w-full border border-slate-200 text-slate-700 text-sm rounded-xl overflow-hidden">
+      <thead class="bg-slate-100">
+        <tr>
+          <th class="p-3 text-left font-semibold">Feature</th>
+          <th class="p-3 text-left font-semibold">HEIC</th>
+          <th class="p-3 text-left font-semibold">JPG</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="p-3">Compression</td><td class="p-3">High (smaller file size)</td><td class="p-3">Medium</td></tr>
+        <tr><td class="p-3">Quality</td><td class="p-3">Excellent (modern codec)</td><td class="p-3">Very good</td></tr>
+        <tr><td class="p-3">Compatibility</td><td class="p-3">Limited to Apple ecosystem</td><td class="p-3">Universal</td></tr>
+        <tr><td class="p-3">Metadata</td><td class="p-3">Supports Live Photos, HDR</td><td class="p-3">Limited EXIF</td></tr>
+        <tr><td class="p-3">Use Case</td><td class="p-3">iPhone/iPad storage optimization</td><td class="p-3">Sharing, editing, web uploads</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="text-xl font-semibold mt-8 mb-3 text-slate-800">Batch Convert Multiple HEIC Files</h3>
+    <p class="text-slate-700 leading-relaxed mb-4">
+      With HEIC2JPGs, you can <strong>convert multiple HEIC images at once</strong>. Our batch converter handles any number of photos, converting them in your browser without lag. Perfect for photographers, designers, or anyone migrating images from iPhone to PC or Android.
+    </p>
+
+    <h3 class="text-xl font-semibold mt-8 mb-3 text-slate-800">No Upload, 100% Private</h3>
+    <p class="text-slate-700 leading-relaxed mb-4">
+      Unlike many converters that upload your images to external servers, our tool processes every HEIC file <strong>locally in your browser</strong>. This means your photos never leave your device — ensuring total privacy and faster conversion speed.
+    </p>
+
+    <h3 class="text-xl font-semibold mt-8 mb-3 text-slate-800">Supported Devices</h3>
+    <ul class="list-disc pl-6 text-slate-700 space-y-1">
+      <li>Apple iPhone & iPad (iOS 11+)</li>
+      <li>macOS HEIC images</li>
+      <li>Windows PCs (via browser)</li>
+      <li>Android smartphones</li>
+      <li>Any modern web browser (Chrome, Edge, Firefox, Safari)</li>
+    </ul>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-6 py-12 bg-slate-50 rounded-2xl shadow-sm">
+    <h2 class="text-2xl font-semibold mb-4 text-slate-800">How to Convert HEIC to JPG Online</h2>
+    <ol class="list-decimal pl-6 space-y-2 text-slate-700">
+      <li>Upload or drag & drop your HEIC images into the converter.</li>
+      <li>Wait a few seconds for automatic conversion.</li>
+      <li>Download the converted JPG images instantly.</li>
+    </ol>
+    <p class="mt-4 text-slate-600">
+      That’s it! Converting HEIC to JPG is as easy as it gets. You’ll get crisp, universally compatible JPG files ready for sharing, printing, or editing.
+    </p>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-semibold mb-4 text-slate-800">Why Choose HEIC2JPGs?</h2>
+    <p class="text-slate-700 leading-relaxed">
+      There are many HEIC to JPG converters online, but HEIC2JPGs focuses on what matters most — speed, quality, and privacy. We don’t watermark your photos or collect personal data. Our conversion process preserves the original quality while producing smaller, shareable JPG files that work everywhere.
+    </p>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-6 py-12 bg-slate-50 rounded-2xl shadow-sm">
+    <h2 class="text-2xl font-semibold mb-6 text-slate-800">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <div>
+        <h3 class="font-semibold text-slate-800">1. What is a HEIC file?</h3>
+        <p class="text-slate-600">HEIC (High Efficiency Image Container) is the image format used by Apple devices. It offers smaller file sizes and better quality than JPG, but it’s not supported by all platforms or software.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-slate-800">2. Why should I convert HEIC to JPG?</h3>
+        <p class="text-slate-600">Converting HEIC to JPG ensures your photos open everywhere — from Windows PCs to online editors and Android devices.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-slate-800">3. Are my files uploaded to a server?</h3>
+        <p class="text-slate-600">No, all conversions are handled locally in your web browser. Your photos stay 100% private and secure.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-slate-800">4. Is this converter really free?</h3>
+        <p class="text-slate-600">Yes! HEIC2JPGs is free forever, with no hidden charges, sign-ups, or limits on conversions.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center py-8 text-slate-500 text-sm border-t mt-12">
+  <!-- Mobile Footer Menu -->
+  <div class="block md:hidden mb-6">
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="/about.html" class="text-blue-600 hover:text-blue-700 transition-colors duration-200">About</a>
+      <a href="/contact.html" class="text-blue-600 hover:text-blue-700 transition-colors duration-200">Contact</a>
+      <a href="/privacy-policy.html" class="text-blue-600 hover:text-blue-700 transition-colors duration-200">Privacy Policy</a>
+      <a href="/disclaimer.html" class="text-blue-600 hover:text-blue-700 transition-colors duration-200">Disclaimer</a>
+      <a href="/terms-of-use.html" class="text-blue-600 hover:text-blue-700 transition-colors duration-200">Terms</a>
+    </div>
+  </div>
+  
+  <!-- Desktop Footer Menu -->
+  <div class="hidden md:block mb-6">
+    <div class="flex justify-center gap-6">
+      <a href="/about.html" class="text-blue-600 hover:text-blue-700 transition-colors duration-200">About</a>
+      <a href="/contact.html" class="text-blue-600 hover:text-blue-700 transition-colors duration-200">Contact</a>
+      <a href="/privacy-policy.html" class="text-blue-600 hover:text-blue-700 transition-colors duration-200">Privacy Policy</a>
+      <a href="/disclaimer.html" class="text-blue-600 hover:text-blue-700 transition-colors duration-200">Disclaimer</a>
+      <a href="/terms-of-use.html" class="text-blue-600 hover:text-blue-700 transition-colors duration-200">Terms of Use</a>
+    </div>
+  </div>
+  
+  <p>© 2025 HEIC2JPGs. All rights reserved.</p>
+</footer>
+  
+  <!-- JavaScript -->
+  <script>
+    (function(){
+      let files = [];
+      let convertedFiles = [];
+
+      const dropzone = document.getElementById('dropzone');
+      const fileInput = document.getElementById('fileInput');
+      const selectBtn = document.getElementById('selectBtn');
+      const fileList = document.getElementById('fileList');
+      const filesContainer = document.getElementById('filesContainer');
+      const fileCount = document.getElementById('fileCount');
+      const addMoreBtn = document.getElementById('addMoreBtn');
+      const convertBtn = document.getElementById('convertBtn');
+      const clearBtn = document.getElementById('clearBtn');
+      const convertedList = document.getElementById('convertedList');
+      const convertedContainer = document.getElementById('convertedContainer');
+      const convertedCount = document.getElementById('convertedCount');
+      const downloadAllBtn = document.getElementById('downloadAllBtn');
+      const convertMoreBtn = document.getElementById('convertMoreBtn');
+
+      function isHeic(file){ return file.type === 'image/heic' || /\.heic$/i.test(file.name); }
+
+      function renderFileList(){
+        if(files.length === 0){
+          dropzone.classList.remove('hidden');
+          fileList.classList.add('hidden');
+          convertedList.classList.add('hidden');
+          return;
+        }
+        dropzone.classList.add('hidden');
+        fileList.classList.remove('hidden');
+        convertedList.classList.add('hidden');
+
+        fileCount.textContent = files.length;
+        filesContainer.innerHTML = '';
+        files.forEach((file,index)=>{
+          const div=document.createElement('div');
+          div.className='flex items-center justify-between bg-slate-50 rounded-lg px-4 py-3';
+          div.innerHTML=`<div class='flex items-center gap-3'><span class='text-slate-700 font-medium'>${file.name}</span><span class='text-slate-500 text-sm'>(${(file.size/1024/1024).toFixed(2)} MB)</span></div><button class='text-red-500 hover:text-red-600' onclick='window._removeFile(${index})'>Remove</button>`;
+          filesContainer.appendChild(div);
+        });
+      }
+
+      window._removeFile=function(i){files.splice(i,1);renderFileList();}
+
+      function renderConvertedList(){
+        fileList.classList.add('hidden');
+        convertedList.classList.remove('hidden');
+        convertedCount.textContent=convertedFiles.length;
+        convertedContainer.innerHTML='';
+        convertedFiles.forEach((file,i)=>{
+          const div=document.createElement('div');
+          div.className='flex items-center justify-between bg-green-50 rounded-lg px-4 py-3';
+          div.innerHTML=`<span class='text-slate-700 font-medium'>${file.name}</span><button class='text-blue-600 hover:text-blue-700' onclick='window._download(${i})'>Download</button>`;
+          convertedContainer.appendChild(div);
+        });
+      }
+
+      window._download=function(i){const f=convertedFiles[i];const a=document.createElement('a');a.href=f.url;a.download=f.name;document.body.appendChild(a);a.click();a.remove();}
+
+      function reset(){convertedFiles.forEach(f=>URL.revokeObjectURL(f.url));files=[];convertedFiles=[];dropzone.classList.remove('hidden');fileList.classList.add('hidden');convertedList.classList.add('hidden');}
+
+      selectBtn.addEventListener('click',()=>fileInput.click());
+      addMoreBtn.addEventListener('click',()=>fileInput.click());
+
+      fileInput.addEventListener('change',e=>{const selected=Array.from(e.target.files).filter(isHeic);files.push(...selected);renderFileList();e.target.value='';});
+
+      ['dragenter','dragover','dragleave','drop'].forEach(ev=>dropzone.addEventListener(ev,preventDefaults));
+      function preventDefaults(e){e.preventDefault();e.stopPropagation();}
+
+      ['dragenter','dragover'].forEach(ev=>dropzone.addEventListener(ev,()=>dropzone.classList.add('border-blue-500','bg-blue-50')));
+      ['dragleave','drop'].forEach(ev=>dropzone.addEventListener(ev,()=>dropzone.classList.remove('border-blue-500','bg-blue-50')));
+
+      dropzone.addEventListener('drop',e=>{const dropped=Array.from(e.dataTransfer.files).filter(isHeic);files.push(...dropped);renderFileList();});
+
+      convertBtn.addEventListener('click',async()=>{
+        if(files.length===0)return;
+        convertBtn.disabled=true;
+        const orig=convertBtn.innerHTML;
+        convertBtn.innerHTML='<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="animate-spin"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg> Converting...';
+        convertedFiles=[];
+        for(const file of files){
+          try{
+            const result=await heic2any({blob:file,toType:'image/jpeg',quality:0.92});
+            const blob=Array.isArray(result)?result[0]:result;
+            const url=URL.createObjectURL(blob);
+            const name=file.name.replace(/\.heic$/i,'.jpg');
+            convertedFiles.push({name,url,blob});
+          }catch(err){console.error('Error converting',file.name,err);}
+        }
+        convertBtn.disabled=false;
+        convertBtn.innerHTML=orig;
+        renderConvertedList();
+      });
+
+      clearBtn.addEventListener('click',reset);
+      convertMoreBtn.addEventListener('click',reset);
+      downloadAllBtn.addEventListener('click',()=>convertedFiles.forEach((f,i)=>setTimeout(()=>window._download(i),i*100)));
+
+      reset();
+    })();
+  </script>
+  
+</body>
+</html>
