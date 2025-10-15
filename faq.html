@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HEIC to JPG FAQ - Frequently Asked Questions | HEIC2JPGs</title>
+  <meta name="description" content="Find answers to common questions about HEIC files, JPG conversion, privacy, and using our free HEIC to JPG converter tool.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://heic2jpgs.com/faq.html">
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-48x48.png">
+
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+  <!-- Android/Chrome Icons -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/images/logo.png">
+
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Microsoft Tiles -->
+  <meta name="msapplication-TileColor" content="#00b894">
+  <meta name="msapplication-TileImage" content="/images/mstile-150x150.png">
+
+  <!-- Browser Theme Colors -->
+  <meta name="theme-color" content="#00b894">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#00b894">
+
+  <!-- Optional Fallback -->
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  
+  <!-- JSON-LD Schema for FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a HEIC file and why does my iPhone use it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HEIC (High Efficiency Image Container) is Apple's modern image format that provides better compression and quality than JPG. iPhones use HEIC to save storage space while maintaining high image quality. Files are typically 40-50% smaller than equivalent JPG files."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why should I convert HEIC to JPG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "JPG has universal compatibility across all devices, operating systems, and software. HEIC files may not open on Windows computers, Android devices, older software, or many websites. Converting ensures your photos work everywhere."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is HEIC2JPGs really free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! HEIC2JPGs is completely free with no hidden costs, watermarks, or usage limits. You can convert as many HEIC files as you need without any charges."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are my photos safe and private when using your converter?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. All conversion happens locally in your web browser - your images never leave your device or get uploaded to any server. This ensures complete privacy and security for your photos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What devices and browsers are supported?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HEIC2JPGs works on all modern browsers including Chrome, Firefox, Safari, and Edge. It's compatible with Windows, Mac, Linux, iOS, and Android devices. The only requirement is a relatively recent browser version."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many files can I convert at once?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can convert multiple HEIC files simultaneously. There's no strict limit, but very large batches (50+ files) may slow down depending on your device's memory and processing power."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will converting to JPG reduce my image quality?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our converter uses high-quality settings to minimize quality loss. While JPG is a lossy format, the difference is typically not noticeable to the naked eye. The converted JPGs will look virtually identical to the original HEIC files."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I do if my HEIC files won't convert?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First, try refreshing the page and using a different browser. Ensure your HEIC files aren't corrupted and come from a legitimate source. If problems persist, contact us with details about your device and browser for assistance."
+        }
+      }
+    ]
+  }
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .faq-item {
+      border-bottom: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+    .faq-question {
+      cursor: pointer;
+      padding: 1.5rem 0;
+      position: relative;
+    }
+    .faq-question::after {
+      content: '+';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.5rem;
+      font-weight: 300;
+      transition: transform 0.3s ease;
+      color: #64748b;
+    }
+    .faq-item.active .faq-question::after {
+      content: '−';
+      transform: translateY(-50%);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      padding: 0 0;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+      padding: 0 0 1.5rem 0;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-slate-100 text-slate-800 min-h-screen flex flex-col">
+  
+  <header class="py-6 border-b border-slate-200 bg-white">
+    <div class="container mx-auto px-4 flex justify-center">
+      <a href="/" class="flex items-center gap-2 text-blue-600 font-bold text-xl">
+        <img src="images/logo.png" alt="HEIC2JPGs logo" class="h-8 w-auto" loading="lazy">
+        HEIC2JPGs
+      </a>
+    </div>
+  </header>
+
+  <main class="flex-grow py-12">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="bg-white rounded-2xl shadow-lg p-8">
+        
+        <h1 class="text-3xl font-bold mb-2 text-slate-800">Frequently Asked Questions</h1>
+        <p class="text-slate-600 mb-8">Find quick answers to common questions about HEIC files and our conversion tool</p>
+
+        <!-- FAQ List -->
+        <div class="space-y-1" id="faqContainer">
+          
+          <div class="faq-item active">
+            <div class="faq-question">
+              <h3 class="text-lg font-semibold text-slate-800 pr-8">What is a HEIC file and why does my iPhone use it?</h3>
+            </div>
+            <div class="faq-answer">
+              <p class="text-slate-700">HEIC (High Efficiency Image Container) is Apple's modern image format that provides better compression and quality than JPG. iPhones use HEIC to save storage space while maintaining high image quality. Files are typically 40-50% smaller than equivalent JPG files.</p>
+              <p class="text-slate-700 mt-2">This format was introduced with iOS 11 and uses the HEIF (High Efficiency Image Format) standard, allowing your iPhone to store more photos without compromising quality.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3 class="text-lg font-semibold text-slate-800 pr-8">Why should I convert HEIC to JPG?</h3>
+            </div>
+            <div class="faq-answer">
+              <p class="text-slate-700">JPG has universal compatibility across all devices, operating systems, and software. HEIC files may not open on:</p>
+              <ul class="list-disc pl-6 mt-2 space-y-1 text-slate-700">
+                <li>Windows computers (especially older versions)</li>
+                <li>Android devices</li>
+                <li>Older photo editing software</li>
+                <li>Many websites and social media platforms</li>
+                <li>Email attachments for some recipients</li>
+              </ul>
+              <p class="text-slate-700 mt-2">Converting ensures your photos work everywhere without compatibility issues.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3 class="text-lg font-semibold text-slate-800 pr-8">Is HEIC2JPGs really free to use?</h3>
+            </div>
+            <div class="faq-answer">
+              <p class="text-slate-700">Yes! HEIC2JPGs is completely free with no hidden costs, watermarks, or usage limits. You can convert as many HEIC files as you need without any charges.</p>
+              <p class="text-slate-700 mt-2">We believe essential tools should be accessible to everyone, which is why we've committed to keeping HEIC2JPGs free forever.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3 class="text-lg font-semibold text-slate-800 pr-8">Are my photos safe and private when using your converter?</h3>
+            </div>
+            <div class="faq-answer">
+              <p class="text-slate-700">Absolutely. All conversion happens locally in your web browser - your images never leave your device or get uploaded to any server. This ensures complete privacy and security for your photos.</p>
+              <p class="text-slate-700 mt-2">Unlike many online converters that upload your files to their servers, HEIC2JPGs processes everything directly in your browser using JavaScript. Your photos stay 100% private.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3 class="text-lg font-semibold text-slate-800 pr-8">What devices and browsers are supported?</h3>
+            </div>
+            <div class="faq-answer">
+              <p class="text-slate-700">HEIC2JPGs works on all modern browsers including Chrome, Firefox, Safari, and Edge. It's compatible with Windows, Mac, Linux, iOS, and Android devices.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3 class="text-lg font-semibold text-slate-800 pr-8">Will converting to JPG reduce my image quality?</h3>
+            </div>
+            <div class="faq-answer">
+              <p class="text-slate-700">Our converter uses high-quality settings to minimize quality loss. While JPG is a lossy format, the difference is typically not noticeable to the naked eye. The converted JPGs will look virtually identical to the original HEIC files.</p>
+              <p class="text-slate-700 mt-2">We use optimal compression settings that balance file size and image quality, ensuring your photos maintain their visual appeal while becoming universally compatible.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3 class="text-lg font-semibold text-slate-800 pr-8">How many files can I convert at once?</h3>
+            </div>
+            <div class="faq-answer">
+              <p class="text-slate-700">You can convert multiple HEIC files simultaneously. There's no strict limit, but very large batches (50+ files) may slow down depending on your device's memory and processing power.</p>
+              <p class="text-slate-700 mt-2">For optimal performance, we recommend converting batches of 10-20 files at a time, especially on mobile devices or older computers.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3 class="text-lg font-semibold text-slate-800 pr-8">What should I do if my HEIC files won't convert?</h3>
+            </div>
+            <div class="faq-answer">
+              <p class="text-slate-700">If you're experiencing conversion issues, try these steps:</p>
+              <ol class="list-decimal pl-6 mt-2 space-y-2 text-slate-700">
+                <li>Refresh the page and try again</li>
+                <li>Use a different web browser (Chrome usually works best)</li>
+                <li>Check that your HEIC files aren't corrupted</li>
+                <li>Ensure you have a stable internet connection for loading the conversion library</li>
+                <li>Try converting one file at a time to isolate the issue</li>
+              </ol>
+              <p class="text-slate-700 mt-2">If problems persist, <a href="/contact.html" class="text-blue-600 hover:text-blue-700">contact us</a> with details about your device, browser, and the specific error you're seeing.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3 class="text-lg font-semibold text-slate-800 pr-8">Do I need to create an account or install software?</h3>
+            </div>
+            <div class="faq-answer">
+              <p class="text-slate-700">No! HEIC2JPGs requires no registration, no software installation, and no account creation. Simply visit our website, upload your HEIC files, and download the converted JPGs.</p>
+              <p class="text-slate-700 mt-2">We've designed the service to be as simple and accessible as possible - just open the website and start converting.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3 class="text-lg font-semibold text-slate-800 pr-8">What's the maximum file size I can convert?</h3>
+            </div>
+            <div class="faq-answer">
+              <p class="text-slate-700">There's no strict file size limit, but very large files (over 50MB) may take longer to process and could potentially cause browser performance issues depending on your device's capabilities.</p>
+              <p class="text-slate-700 mt-2">Most HEIC files from iPhones are between 1-10MB, which convert quickly and reliably. If you have exceptionally large files, consider converting them individually for best results.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3 class="text-lg font-semibold text-slate-800 pr-8">Will Live Photos and other iPhone features be preserved?</h3>
+            </div>
+            <div class="faq-answer">
+              <p class="text-slate-700">When converting HEIC to JPG, Live Photos will be converted to standard still images. The motion and audio components of Live Photos are not preserved in the JPG format.</p>
+              <p class="text-slate-700 mt-2">Similarly, other advanced HEIC features like depth information and transparency may not transfer to the JPG format, which is a more basic image format designed for universal compatibility rather than advanced features.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Support Contact Section -->
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mt-8 text-center">
+          <h3 class="text-xl font-semibold text-blue-800 mb-3">Still Have Questions?</h3>
+          <p class="text-blue-700 mb-4">We're here to help! Contact us directly.</p>
+          <a href="/contact.html" class="bg-white hover:bg-slate-100 text-blue-600 border border-blue-600 font-semibold px-6 py-3 rounded-lg transition-colors duration-200 inline-flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            Contact Support
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-center py-8 text-slate-500 text-sm border-t mt-12 bg-white">
+    <!-- Mobile Footer Menu -->
+    <div class="block md:hidden mb-6">
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/about.html" class="text-blue-600 hover:text-blue-700 transition-colors duration-200">About</a>
+        <a href="/blog.html" class="text-blue-600 hover:text-blue-700 transition-colors duration-200">Blog</a>
+        <a href="/faq.html" class="text-blue-600 hover:text-blue-700 transition-colors duration-200 font-semibold">FAQ</a>
+        <a href="/contact.html" class="text-blue-600 hover:text-blue-700 transition-colors duration-200">Contact</a>
+        <a href="/privacy-policy.html" class="text-blue-600 hover:text-blue-700 transition-colors duration-200">Privacy</a>
+        <a href="/disclaimer.html" class="text-blue-600 hover:text-blue-700 transition-colors duration-200">Disclaimer</a>
+        <a href="/terms-of-use.html" class="text-blue-600 hover:text-blue-700 transition-colors duration-200">Terms</a>
+      </div>
+    </div>
+    
+    <!-- Desktop Footer Menu -->
+    <div class="hidden md:block mb-6">
+      <div class="flex justify-center gap-6">
+        <a href="/about.html" class="text-blue-600 hover:text-blue-700 transition-colors duration-200">About</a>
+        <a href="/blog.html" class="text-blue-600 hover:text-blue-700 transition-colors duration-200">Blog</a>
+        <a href="/faq.html" class="text-blue-600 hover:text-blue-700 transition-colors duration-200 font-semibold">FAQ</a>
+        <a href="/contact.html" class="text-blue-600 hover:text-blue-700 transition-colors duration-200">Contact</a>
+        <a href="/privacy-policy.html" class="text-blue-600 hover:text-blue-700 transition-colors duration-200">Privacy Policy</a>
+        <a href="/disclaimer.html" class="text-blue-600 hover:text-blue-700 transition-colors duration-200">Disclaimer</a>
+        <a href="/terms-of-use.html" class="text-blue-600 hover:text-blue-700 transition-colors duration-200">Terms of Use</a>
+      </div>
+    </div>
+    
+    <p>© 2025 HEIC2JPGs. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // FAQ Accordion Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const faqItems = document.querySelectorAll('.faq-item');
+      
+      // Toggle FAQ items
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+          
+          // Close all items
+          faqItems.forEach(i => i.classList.remove('active'));
+          
+          // If it wasn't active, open it
+          if (!isActive) {
+            item.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
