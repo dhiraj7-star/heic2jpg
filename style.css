@@ -1,4 +1,4 @@
-:root {
+    :root {
   --accent: #0077ff;        
   --accent-600: #374151;    
   --bg: #f9fafb;            
@@ -18,7 +18,7 @@
 html,body{height:100%}
 body{
   margin:0;
-  background: linear-gradient(180deg, #fbfdfe 0%, #ffffff 100%);
+  background: white;
   color:var(--text);
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
@@ -29,7 +29,7 @@ body{
 
 
 header{
-  background: #fff;
+  background: white;
   border-bottom: 1px solid rgba(15,23,42,0.04);
   position:sticky;
   top:0;
@@ -42,13 +42,13 @@ header > div{
   display:flex;
   align-items:center;
   gap:12px;
+  justify-content: center;
 }
 header img{
   width:44px;
   height:44px;
   object-fit:contain;
-  border-radius:8px;
-  box-shadow: var(--shadow);
+  
 }
 header a{
   display:flex;
@@ -113,7 +113,7 @@ nav a:focus{ box-shadow: var(--focus-outline) }
 
 
 section{
-  background:#fff;
+  background:#ffffff;
   border:1px solid rgba(12,16,22,0.04);
   padding:18px;
   border-radius:12px;
@@ -205,6 +205,5 @@ footer a:hover{ background: rgba(0,184,148,0.04) }
   main{ margin:0; padding:0 }
 }
 
-
   
-
+  
