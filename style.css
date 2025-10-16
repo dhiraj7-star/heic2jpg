@@ -47,7 +47,8 @@ header img{
   width:44px;
   height:44px;
   object-fit:contain;
-  
+  border-radius:8px;
+  box-shadow: var(--shadow);
 }
 header a{
   display:flex;
@@ -206,3 +207,4 @@ footer a:hover{ background: rgba(0,184,148,0.04) }
 
 
   
+
